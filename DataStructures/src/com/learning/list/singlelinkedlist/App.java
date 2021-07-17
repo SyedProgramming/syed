@@ -27,7 +27,7 @@ public class App {
         System.out.println(listLength(nodeA));
 */
 
-/*
+
         //Single Linked List Call
         SingleLinkedList myList = new SingleLinkedList();
         myList.insertAtBeginning(100);
@@ -35,47 +35,8 @@ public class App {
         myList.insertAtBeginning(300);
         myList.insertAtEnd(500);
         myList.displayResults();
-*/
 
-        //Circular Linked List Call
-        CircularLinkedList myList = new CircularLinkedList();
-        //myList.insertAtBeginning(100);
-        //myList.insertAtBeginning(200);
-        myList.insertAtBeginning(10);
-        myList.insertAtBeginning(20);
-        myList.insertAtBeginning(30);
-        myList.insertAtBeginning(40);
-        myList.insertAtBeginning(50);
-        myList.insertAtBeginning(60);
-        myList.insertAtBeginning(70);
-        myList.insertAtBeginning(80);
-        myList.insertAtBeginning(90);
-        myList.insertAtBeginning(100);
 
-        System.out.println("******Inserted At Beginning***********");
-        myList.displayResults();
-        System.out.println("**************************************");
-
-        System.out.println("=======================================");
-
-        System.out.println("******Inserted At End*****************");
-        myList.insertAtEnd(200);
-        myList.displayResults();
-        System.out.println("**************************************");
-
-        System.out.println("=======================================");
-
-        System.out.println("******Delete At Beginning*************");
-        Node deletedNodeAtBeginning = myList.deleteNodeAtBeginning();
-        System.out.println(deletedNodeAtBeginning.data);
-        System.out.println("**************************************");
-
-        System.out.println("=======================================");
-
-        System.out.println("******Delete At End*************");
-        Node deletedNodeAtEnd = myList.deleteNodeAtEnd();
-        System.out.println(deletedNodeAtEnd.data);
-        System.out.println("**************************************");
     }
 
     public static int listLength(Node aNode) {

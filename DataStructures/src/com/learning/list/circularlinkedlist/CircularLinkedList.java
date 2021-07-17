@@ -77,12 +77,9 @@ public class CircularLinkedList {
                     System.out.println("Deleted Node Value is  " + current.next.data);
 
                     current.next = first;
-
                     break;
                 }
             }
-
-
         }
         return deletedNode;
     }
