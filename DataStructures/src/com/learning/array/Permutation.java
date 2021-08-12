@@ -33,8 +33,4 @@ public class Permutation {
         Permutation p = new Permutation();
         System.out.println(p.isPermutation(num1, num2));
     }
-
-
-
-
 }
