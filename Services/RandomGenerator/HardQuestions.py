@@ -4,7 +4,7 @@ from variables import *
 
 
 score = 0
-selected_questions = rd.choices(questions_draft, k=10)
+selected_questions = rd.choices(questions, k=10)
 
 def Question1():
     print("Enter your answer: ")
@@ -250,13 +250,13 @@ def Question30():
 def printResult():
     if(score >= 80):
         print("""
-        ***************************
-        | Awesome...! You have scored {}% |
+        ***************************                                                                          
+        | Awesome...! You have scored {}% |                                                                                      
         ***************************""".format(score))
     else:
         print("""
-        ***************************
-        | Better luck next time you have scored {}% |
+        ***************************                                                                          
+        | Better luck next time you have scored {}% |                                                                                      
         ***************************""".format(score))
 
 
@@ -264,7 +264,7 @@ def printResult():
 def runHardQuiz():
     global score
     print("""
-    **********************************
+    **********************************                                                                                      
     | A Simple Math Quiz - Hard Mode |                                                                                      
     **********************************""")
     for i in selected_questions:
@@ -330,3 +330,22 @@ def runHardQuiz():
             score += int(Question30());
 
     printResult()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

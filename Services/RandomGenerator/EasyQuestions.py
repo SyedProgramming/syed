@@ -4,7 +4,7 @@ from variables import *
 
 
 score = 0
-selected_questions = rd.choices(questions_draft, k=10)
+selected_questions = rd.choices(questions, k=10)
 
 def Question1():
     print("Enter your answer: ")
