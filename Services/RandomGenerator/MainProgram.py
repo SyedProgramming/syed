@@ -2,12 +2,12 @@
 import random
 import EasyQuestions as eq
 import HardQuestions as hq
+import pyfiglet as pyf
 
-print("""
-***************************                                                                          
-| Welcome to the Math Quiz |                                                                                      
-***************************""")
-
+ascii_banner_1 = pyf.figlet_format("Hello Everyone...!")
+ascii_banner_2 = pyf.figlet_format("Welcome to the Math Quiz", font='digital')
+print(ascii_banner_1)
+print(ascii_banner_2)
 # Selection of mode (Easy/Difficult)
 difficulty_mode = input("Please select the difficulty mode : \n\t Press E for Easy \n \t Press H for Hard \n")
 print("Mode selected : " + difficulty_mode)

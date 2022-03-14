@@ -262,6 +262,7 @@ def printResult():
 
 
 def runEasyQuiz():
+    question_number=1
     global score
     print("""
     **********************************                                                                                      
@@ -269,64 +270,94 @@ def runEasyQuiz():
     **********************************""")
     for i in selected_questions:
         if (i == 'Question1'):
+            print("***** Question -",question_number,"*****");question_number +=1;
             score += int(Question1());
         if (i == 'Question2'):
+            print("***** Question -",question_number,"*****");question_number +=1;
             score += int(Question2());
         if (i == 'Question3'):
+            print("***** Question -",question_number,"*****");question_number +=1;
             score += int(Question3());
         if (i == 'Question4'):
+            print("***** Question -",question_number,"*****");question_number +=1;
             score += int(Question4());
         if (i == 'Question5'):
+            print("***** Question -",question_number,"*****");question_number +=1;
             score += int(Question5());
         if (i == 'Question6'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question6());
         if (i == 'Question7'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question7());
         if (i == 'Question8'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question8());
         if (i == 'Question9'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question9());
         if (i == 'Question10'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question10());
         if (i == 'Question11'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question11());
         if (i == 'Question12'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question12());
         if (i == 'Question13'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question13());
         if (i == 'Question14'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question14());
         if (i == 'Question15'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question15());
         if (i == 'Question16'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question16());
         if (i == 'Question17'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question17());
         if (i == 'Question18'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question18());
         if (i == 'Question19'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question19());
         if (i == 'Question20'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question20());
         if (i == 'Question21'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question21());
         if (i == 'Question22'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question22());
         if (i == 'Question23'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question23());
         if (i == 'Question24'):
-            Question24();
+            score += int(Question24());
+            print("***** Question -", question_number, "*****");question_number += 1;
         if (i == 'Question25'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question25());
         if (i == 'Question26'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question26());
         if (i == 'Question27'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question27());
         if (i == 'Question28'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question28());
         if (i == 'Question29'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question29());
         if (i == 'Question30'):
+            print("***** Question -", question_number, "*****");question_number += 1;
             score += int(Question30());
 
     printResult()
