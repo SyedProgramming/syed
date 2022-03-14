@@ -10,7 +10,14 @@ print(ascii_banner_1)
 print(ascii_banner_2)
 # Selection of mode (Easy/Difficult)
 difficulty_mode = input("Please select the difficulty mode : \n\t Press E for Easy \n \t Press H for Hard \n")
-print("Mode selected : " + difficulty_mode)
+
+if(difficulty_mode.lower() == 'e'):
+    print("Mode selected : Easy")
+elif (difficulty_mode.lower() == 'h'):
+    print("Mode selected : Hard")
+else:
+    print("")
+
 
 if(difficulty_mode.lower() == 'e'):
     eq.runEasyQuiz()
