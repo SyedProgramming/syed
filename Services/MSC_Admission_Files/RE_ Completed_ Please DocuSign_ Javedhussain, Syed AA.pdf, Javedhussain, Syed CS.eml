@@ -1,0 +1,786 @@
+Received: from PH0PR10MB4407.namprd10.prod.outlook.com (2603:10b6:510:31::19)
+ by PH0PR10MB5516.namprd10.prod.outlook.com with HTTPS; Thu, 27 Jan 2022
+ 08:31:16 +0000
+Received: from MWHPR12CA0052.namprd12.prod.outlook.com (2603:10b6:300:103::14)
+ by PH0PR10MB4407.namprd10.prod.outlook.com (2603:10b6:510:31::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4909.10; Thu, 27 Jan
+ 2022 08:31:15 +0000
+Received: from MW2NAM10FT023.eop-nam10.prod.protection.outlook.com
+ (2603:10b6:300:103:cafe::ae) by MWHPR12CA0052.outlook.office365.com
+ (2603:10b6:300:103::14) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4930.15 via Frontend
+ Transport; Thu, 27 Jan 2022 08:31:15 +0000
+Authentication-Results: spf=pass (sender IP is 144.173.2.187)
+ smtp.mailfrom=exeter.ac.uk; dkim=test (signature was verified)
+ header.d=exeter.ac.uk;dmarc=pass action=none
+ header.from=exeter.ac.uk;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of exeter.ac.uk designates
+ 144.173.2.187 as permitted sender) receiver=protection.outlook.com;
+ client-ip=144.173.2.187; helo=rcrmail01.ex.ac.uk;
+Received: from SW730O365EXP013.visa.com (198.241.159.156) by
+ MW2NAM10FT023.mail.protection.outlook.com (10.13.154.154) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.4930.15 via Frontend Transport; Thu, 27 Jan 2022 08:31:13 +0000
+Received: from SW730O365EXP012.visa.com (10.173.38.70) by
+ SW730O365EXP013.visa.com (10.173.54.30) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.922.19; Thu, 27 Jan 2022 08:29:21 +0000
+Received: from sw730exp511.visa.com (10.173.128.89) by
+ SW730O365EXP012.visa.com (10.173.38.70) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.922.19; Thu, 27 Jan 2022 08:31:05 +0000
+Received: from na730femps01-int.visa.com (10.173.17.46) by
+ sw730exp511.visa.com (10.173.128.250) with Microsoft SMTP Server id
+ 15.2.922.19 via Frontend Transport; Thu, 27 Jan 2022 08:31:05 +0000
+Received: from portal2i.visa.com (portal2i.visa.com [10.55.5.62])
+	by na730femps01-int.visa.com (Postfix) with ESMTP id 4Jkv1h1fRkz4QhWb
+	for <jasyed@visa.com>; Thu, 27 Jan 2022 08:31:04 +0000 (UTC)
+Received-SPF: None (portal2i.visa.com: no sender authenticity
+  information available from domain of
+  Admin.Apprenticeships@exeter.ac.uk) identity=pra;
+  client-ip=144.173.2.187; receiver=portal2i.visa.com;
+  envelope-from="Admin.Apprenticeships@exeter.ac.uk";
+  x-sender="Admin.Apprenticeships@exeter.ac.uk";
+  x-conformance=sidf_compatible
+Received-SPF: Pass (portal2i.visa.com: domain of
+  Admin.Apprenticeships@exeter.ac.uk designates 144.173.2.187
+  as permitted sender) identity=mailfrom;
+  client-ip=144.173.2.187; receiver=portal2i.visa.com;
+  envelope-from="Admin.Apprenticeships@exeter.ac.uk";
+  x-sender="Admin.Apprenticeships@exeter.ac.uk";
+  x-conformance=sidf_compatible; x-record-type="v=spf1";
+  x-record-text="v=spf1 +ip4:144.173.2.186/31
+  +ip4:213.206.140.0/22 +ip4:82.195.160.0/22
+  +ip4:216.235.196.0/22 +ip4:216.235.200.0/21
+  +ip4:205.139.104.0/22 +ip4:206.79.6.0/24
+  +ip4:134.213.75.98/32 +ip4:213.212.88.171/32
+  +ip4:23.102.4.24/32 +ip4:40.87.152.186/32 ~all"
+Received-SPF: None (portal2i.visa.com: no sender authenticity
+  information available from domain of
+  postmaster@rcrmail01.ex.ac.uk) identity=helo;
+  client-ip=144.173.2.187; receiver=portal2i.visa.com;
+  envelope-from="Admin.Apprenticeships@exeter.ac.uk";
+  x-sender="postmaster@rcrmail01.ex.ac.uk";
+  x-conformance=sidf_compatible
+Authentication-Results-Original: portal2i.visa.com; spf=None
+ smtp.pra=Admin.Apprenticeships@exeter.ac.uk; spf=Pass
+ smtp.mailfrom=Admin.Apprenticeships@exeter.ac.uk; spf=None
+ smtp.helo=postmaster@rcrmail01.ex.ac.uk; dmarc=pass (p=none dis=none)
+ d=exeter.ac.uk
+IronPort-SDR: /dLFl6IHmruSfCiZonbUroW4VqkpKULmUIOmaqXiHpmYuTVPVSklOtbJvQafl5mOTJ4R3zjOAT
+ jJZaeXeAZluCcpOXOVL+UL5xZUeV7xTI8=
+X-IPAS-Result: =?us-ascii?q?A0EmAACFV/JhfbsCrZBaFgcBAQEBCQESAQUFAUCBRggBC?=
+ =?us-ascii?q?wGBIDEuKBkBZFooBAsxA4gOA4RZYIUOXYIlA44NhF2GU4MUFIEsFiABBQIJA?=
+ =?us-ascii?q?QEBAQEBAQEBBwEBKgENCQQBAQMEgiCCXgKDYAIdBwEEMAkOAQIBAgEBAQEBA?=
+ =?us-ascii?q?wIDAQEBAQUBAQEEAQEBAgEBAgMEAQECEAEBDxkIDGRkaIFPgXQLNA2CNQUCA?=
+ =?us-ascii?q?x8BBgtjSgM7AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBB?=
+ =?us-ascii?q?QIIDCwaDBIbEwEBHQEBAQEDEhsTAQEHLAUPAgEIEQMBAQEJGAEGByYMFAkIA?=
+ =?us-ascii?q?gQPAwEIDgUHghlEBAKCDlcDLgEECkKgXwE3AQUBgToCGQGBFQ0BhTiCWxo1e?=
+ =?us-ascii?q?IEzgQGCCAEBBgQDAQKBNAGBA4JTAzUEIoFxCYEjFwGBZgGBK4NMSAODAYQIJ?=
+ =?us-ascii?q?zeBcoEVQ4JnPoJjAQIBBBSBBwIDAgMBCwQDAQcXBQUFAhEBBwUBAQgCPoI5I?=
+ =?us-ascii?q?IIMIpEuHAE2IRctDAEJAgYGLw8BBUoBCAgBEBEDBQdGAwUJARklBRErAmGMc?=
+ =?us-ascii?q?YQcAQsbCRSMXI0zkEGCdgeDSIsAixqGJYM3FYNyjBEFhlWKGocDgz2NYINGb?=
+ =?us-ascii?q?neLI1wCgQmTe0qEbAIEAgQFAg4BAQaBYT8LPx1dDAeBAYFdgUsJCjsBAgECD?=
+ =?us-ascii?q?QECAgMBAgECCQEBAo4DGh4ZbgECgkmEWYMhgmR0AgEBATMCBgsBAQMJiwJag?=
+ =?us-ascii?q?WwBAQ?=
+IronPort-Data: A9a23:beMldKLFY9wCHeYpFE+R9pMlxSXFcZb7ZxGr2PjKsXjdYENS0TFUx
+ 2UYXTzUOfzfYGX8L9BwPtzl9UxUuJKEm98yTFRorCE8RH9jl5HIVI+TRqvS04N+DSFioGZPt
+ Zh2hgzocZhcoln0+E31atANilEljfvTF9IQMANHU8xIbVcMpB0J0HqPoMZkxN446TSFK1nV4
+ 4mq+peAYAbNNwNcawr41YrS8HuDg9yv4Fv0jnRmDRyclASG/5W9JMt3yZCZdxMUcKENdgKJb
+ 7yrIIWCw4/s10xF5uVJMlrMWhZirrb6ZWBig5fNMkSoqkAqSicais7XOBeAAKv+Zvrgc91Zk
+ b1wWZKMpQgBP6OXhLs5fUNiT3teDfIY9K/NPHnnvpnGp6HGWyOEL/RGFkosOIQZ/r4uR2xes
+ /UTbi0OBvyBr7vqnPTiFbIq3IJ6fJaD0IA34hmMyRnwAfMnR9bqW73Q6NlE3Tw9ncBPBe32a
+ toUdTd1Kh3LJQBMUrsSIMhnxLr41iKkKlW0rnq+mZdu2EHolzV797zMaZ3OX9u2X/xKyxPwS
+ mXupDinXkhDbrRz0wGt8Hu3l+LDtT36Q4tUH7q9nsOGm3WJzXYWARwSDQL9rOn/g0X4RtE3x
+ 1EoFjQGrKZp6BOPYIPHA0eYkCHasg4WRtsIHLhvgO2S8Zb87wGcD2kCazdObt06qcM7LQDGM
+ HfVxLsF4hQz7NWopWKhGqS88GvtYndJRYMWTWpfEVRdvLEPtalu5i8jWOqPB4aapLUZ8xnd0
+ z2WoTJWa147oP5Sv0lX1X3BjDaloJShc+LYzh/cRGes7wchPciod8qh4h7G7p6szbp1rHHc5
+ RDoeODHsoji6K1hcgTRGI3h+5nztp643MX02wIHInXY323FF4SfVY5R+ipiA0xiL9wJfzTkC
+ GeK518KvsUCbCLxPf8uC25UNyjM5fa5fTgCfq6IBueinrAqLVbvENxGOhTNhDyxyCDAb4lmY
+ cnKKa5A8kr2+Yw8kGTqHr5HuVPa7iI3w27PDY39zgqqy6GfeG/dT7oZL1yUbYgEAFCs/m3oH
+ yJkH5LTk313Db2vCgGKoNV7BQ1bfRAG6WXe8ZE/mhirflE3SQnMypb5ndscRmCSt/0Fz7iTp
+ iDkBBYwJZiWrSSvFDhmo0tLMNvHNauTZ1piVcD1FVr3iXUlf6i166ITK8k+cbU9rbYxwO55U
+ /QfPcyLROlME2yV9zMYZJj7jYpjaBXy3VzeZnT+OmBncs4yXRHN9//lYhDrqHsEAB2xuJZsu
+ LanzA7aHccOSl06XsbbYf6i1X2run0ZlL4gVkfEOIAJKkj8/ZRnMWr4hbkqIJhUexnEwzKb0
+ SeQAAsZ/LGT89Zrq4OR3a3d9tWnCepzGEZeDlL317fuOHmI5HenzK9BTP2MIWLXWlTy9fjwf
+ u5S1fz9bKAKkVsW4YpxF7FnkfA369f1/u8I1A9+GXzKawzyTL5wZHCNm9RM7/UfyrhcsAqwe
+ 0SO5tgDYevZZ521SAZJKVp3dPmH2NEVhiLWsaY/LnL86XIl57GAS0hTY0SBhXAPNrdzK495k
+ +4ttNRPu16lgQAvO9eC1nkS+nTKJ3dGTqZ+7sMWB4riiwwKzFBeYMWEVH+pvsHXM41BYhswP
+ zuZpKvenLAAlEDMRHw+SCrW1u1HiJVS5R1HwTfu/bhSdgYpWxP24PFQzdjzZh5e1BBO0uYrY
+ y5mJwt8LuOT/F+EQSSFs3+EQ2l86N+xoyQdCGflUEXUX0S0W3aLJWZ7JOXlEIUx7TdHZjYCl
+ F2H4D+NbNspFf0dGgM/SUN5pualRNc36w6qdAVL2SiaN8FSXAcJSZNCqYbFR9ULzC/xaID6S
+ TFWwdtN
+IronPort-HdrOrdr: A9a23:w89nsaGc/4enBqN7pLqFVJHXdLJyesId70hD6qkvc31om52j+f
+ xGws516fatskdtZJhSo6H9BEDgewKSyXcR2+Is1NiZLXDbUQeTXeNfBM7Zskfd8k7Fh6BgPM
+ VbAtBD4bTLZDAR4KqbkWqF+pQbsaK6GcuT9IPjJgJWPGdXgtZbnmBE42igYyhLbTgDIaB8OI
+ uX58JBqTblU28QdN6HCn4MWPWGj8HXlbr9CCR2RiIP2U2rt3eF+bT6Gx+X0lM1SDVU24ov9m
+ DDjkjQ+rijifem0RXRvlWjr6i+2eGRieerNvb8z/T9GQ+czjpAo74RHIFqiQpF4t1HLmxa1u
+ Uk7S1QZviboEmhAV1d6SGdpTUIlgxes0MKgGXo8UcKraHCNUMHItsEioRDfhTD7U08+Nl6za
+ JQxmqc84FaFBXagU3GlpL1vjxR5wKJSEAZ4KUuZr1kIP8jQa4UqZZa8FJeEZ8GEi6/4Ic7EP
+ N2BMWZ4PpNa1uVY33Qo2EqmbWXLzgONwbDRlJHtt2e0jBQknw8x0wExNYHlnNF8J4mUZFL6+
+ nNL6wtnrBTSc0da757GY46MIaKI32IRQiJPHOZIFzhGq1CM3XRq4Tv6LFw/+2ucIxg9up6pH
+ 0AaiIviYcfQTOdNSS+5uw9zvmWehTPYd3E8LAq26RE
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-AV: E=McAfee;i="6200,9189,10239"; a="210588331"
+X-IronPort-AV: E=Sophos;i="5.88,320,1635206400"; 
+   d="scan'208,217";a="210588331"
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from rcrmail01.ex.ac.uk ([144.173.2.187])
+  by portal2i.visa.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384; 27 Jan 2022 08:30:59 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=exeter.ac.uk; s=exim; h=MIME-Version:Content-Type:In-Reply-To:References:
+	Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=6A9CUPbHE5b/Rjlu5G68E29H8IJQl6A5dzB9A+A/deQ=; b=4TKQBp7GJYNXJX0szbvUMxRDan
+	kzX5GTcZVk6X1w50CqahMCNCNqJzuN4r+ZGo46js45YdAunTneQxTgyKVQEqO060bRPzSP97uHtrM
+	+9OQo7QyfPV2KhKqYUcMGRa0g7XxAdjzKsaV6iJL75EX/EmbQo4IZ8ivQsQpv9LrQaBI=;
+Received: from vmexchangehyb02.ex.ac.uk ([144.173.16.11] helo=VMEXCHANGEHYB02.isad.isadroot.ex.ac.uk)
+	by rcrmail01.ex.ac.uk with esmtps (Exim 4.92.3/mail)
+	id 1nD0BD-0004pl-05
+	for jasyed@visa.com; Thu, 27 Jan 2022 08:30:55 +0000
+Received: from VMEXCHANGEHYB01.isad.isadroot.ex.ac.uk (144.173.16.10) by
+ VMEXCHANGEHYB02.isad.isadroot.ex.ac.uk (144.173.16.11) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
+ 15.1.2375.17; Thu, 27 Jan 2022 08:30:54 +0000
+Received: from GBR01-CWL-obe.outbound.protection.outlook.com (104.47.20.56) by
+ owa.exeter.ac.uk (144.173.16.10) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id 15.1.2375.17 via Frontend
+ Transport; Thu, 27 Jan 2022 08:30:54 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=fM8erl+vvJ8btQLqrMF+So/U5voJv3vO+ry5YXMabgs7+MLkPmJZ7VWygTAgKVF8c8TJQjCwlborbyBUcnHqz3NPL90THKEv7zIRPTVaxtsiwX3lF95MToVTCeegyeR2+bBk6z4hSDKbPYMbHpqoLMlzqPLqYcinj8qIzrAoNcaP4ySCoUi5MwYEbtsN6vaECB2yUqOtCL3QogXFgaK4E6FlpFgPzT3SMyjQlaCb7OYxsePlmaqZ+gvRFn6g+McKfHXEIysOWqsViouZ50EEJLGGMjMQ0pApdIkKKY4kwZliSfqWMH3u07+SdRbX4677KFhdcEMuFUgTPtTGBlqK4g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=6A9CUPbHE5b/Rjlu5G68E29H8IJQl6A5dzB9A+A/deQ=;
+ b=RaRSSZ9QnV6TsBsCQDzXwi91yzxxss5UFcY/EFg5rvAkIMOEFOdlZmP46FnqJGN2PP7Jqli0/6RIWdrGk9agK12UJygraUbpgbVc8FEyo4I59bOm9ZKJTyEcT/yqHmQkllIfP682E8KXrcsG2nzI6aHjXxFsHEX/b0W0tcmADbsZThNZE5KHxNoXgVaUsE1lM4NZSj/7AwsnoMy3ZLrFhqfB1qo1NcpW0uzlRxmdU6VwwBlmXap3Q0/meHyLLvC5W36LBcRKEKkQ7sjQE6HbcyrjOs4x/9rhh/mnfTQ3yRjz0xSwJlU2hDVf1/rMeS6iQWw4YdmmK3meMCp5x6EsWQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+Received: from LO2P265MB3053.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:17f::14)
+ by LO2P265MB4552.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:239::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4930.15; Thu, 27 Jan
+ 2022 08:30:48 +0000
+Received: from LO2P265MB3053.GBRP265.PROD.OUTLOOK.COM
+ ([fe80::d585:f161:c9f4:1337]) by LO2P265MB3053.GBRP265.PROD.OUTLOOK.COM
+ ([fe80::d585:f161:c9f4:1337%4]) with mapi id 15.20.4930.017; Thu, 27 Jan 2022
+ 08:30:48 +0000
+From: Degree Apprenticeships Administration Mail
+	<Admin.Apprenticeships@exeter.ac.uk>
+To: "SYED, JAVEDHUSSAIN" <jasyed@visa.com>
+Subject: RE: Completed: Please DocuSign: Javedhussain, Syed AA.pdf,
+ Javedhussain, Syed CS.docx
+Thread-Topic: Completed: Please DocuSign: Javedhussain, Syed AA.pdf,
+ Javedhussain, Syed CS.docx
+Thread-Index: AQHYDTxBsX3m2cX4l028plHd4PVREKx1nFiAgAD5KfA=
+Date: Thu, 27 Jan 2022 08:30:48 +0000
+Message-ID: <LO2P265MB3053DFB23E0B302953346204CE219@LO2P265MB3053.GBRP265.PROD.OUTLOOK.COM>
+References: <96ddef2f6e5648ada0ff1c1641364349@eumail.docusign.net>
+ <A80DDE60-928D-43BD-8206-DC9BB4519FD9@visa.com>
+In-Reply-To: <A80DDE60-928D-43BD-8206-DC9BB4519FD9@visa.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels: MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Enabled=true;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Enabled=true;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Name=Not
+ Classified;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_ActionId=6958bbb3-e889-456c-8b10-33fe0fecb14e;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_ContentBits=0;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_SetDate=2022-01-26T17:32:06Z;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_SiteId=38305e12-e15d-4ee8-88b9-c4db1c477d76;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Method=Standard;
+X-MS-Office365-Filtering-Correlation-Id: 5b0ea25f-beab-42e4-78d4-08d9e16f6161
+x-ms-traffictypediagnostic:
+ LO2P265MB4552:EE_|MW2NAM10FT023:EE_|PH0PR10MB4407:EE_
+x-microsoft-antispam-prvs: <LO2P265MB45523DEE0D50D05A630F164DCE219@LO2P265MB4552.GBRP265.PROD.OUTLOOK.COM>
+x-ms-oob-tlc-oobclassifiers: OLM:9508;OLM:9508;
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ kpHJ+bv++D6Ejs4Qu6hYpRIaXN+79q8QwFe46h8z+51n+9UmBi/tE/7NG0kWI9tj2LleRxFScxMfx0zecFkH2hEilReRKYBLi+dsJfLyJv4zfCpvkPaaneheXAjH9QCbuuaWvqogieJBxicGvB3YlNnGgBwrNuGVudLPW+c8DrMsCVurtCqg46WSTN9W4W7yoRo1RaMub/+9F3UUE/sUn/sXSlfAMOLDuNgbHQ5YTvBajIE2A5MqRPjH5MZYCRfZ7UsFcLDNPuyu+ErvmmzJF4RqFHqAX8QKRrBUpqyMQcITJDmMB3IHYNrdlBaty6ejZt7OyvntaxJ7jMh8pP41pCrQjPH5liOXweLeY/uNQJI/BfpYQxtvYfc5QXuWtMDcQnQgEKGSnMmPUI3zTprc0ZlpIvh6iGDpRdSTxPJ5FqgTDrxVFJrs5qL8CwDjC4xhnTwB4wAVbaQtkHzM7c1azivUVcYtAin2UizSt1s6Id/GORnFl6DCtLk0zGiJnw2q3dNnIQaIV56MJm79PxI5xDUSOs3sKXI/lRE5l1AEr9m3UxspbUt4JIeF6aL5H5OeNusPpxqKUM8wLLxFSYFsxICinXA1PsO0kIN9PEZrWwH5O69wwQwCt3ueq6ga2ddLgYa+uDwadLnZ8utoQ6pJAmcWH59wA6Yi2fpzn0viOM7affFLaMPsekhdMyhjjWpl/iiCQGsydDL2IB+v8J0n0pb3ui5q3JA8YnLX4ER0NBr+/bCs1HdFq10pVpW68HmFnMXzgpO5grNSg0xZFRmnCiVaPjPFnLnCde3q9nFXjvP3zt/R4ULykREIGvlRaSknZSB1FKcpB71GIH94JY6vww==
+X-Forefront-Antispam-Report-Untrusted:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:LO2P265MB3053.GBRP265.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230001)(4636009)(366004)(47650400002)(9686003)(5660300002)(122000001)(55016003)(9326002)(6916009)(52536014)(2906002)(166002)(508600001)(33656002)(38070700005)(316002)(86362001)(186003)(26005)(786003)(83380400001)(71200400001)(76116006)(66476007)(66556008)(66946007)(53546011)(66446008)(64756008)(38100700002)(7696005)(6506007)(8936002)(8676002)(20210929001);DIR:OUT;SFP:1101;
+MIME-Version: 1.0
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LO2P265MB4552
+Return-Path: prvs=019e9b76d=Admin.Apprenticeships@exeter.ac.uk
+X-OrganizationHeadersPreserved: SW730O365EXP012.visa.com
+X-MS-Exchange-Organization-ExpirationStartTime: 27 Jan 2022 08:31:14.1033
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 5b0ea25f-beab-42e4-78d4-08d9e16f6161
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-SkipListedInternetSender:
+ ip=[144.173.2.187];domain=rcrmail01.ex.ac.uk
+X-MS-Exchange-ExternalOriginalInternetSender:
+ ip=[144.173.2.187];domain=rcrmail01.ex.ac.uk
+X-CrossPremisesHeadersPromoted:
+ MW2NAM10FT023.eop-nam10.prod.protection.outlook.com
+X-CrossPremisesHeadersFiltered:
+ MW2NAM10FT023.eop-nam10.prod.protection.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ MW2NAM10FT023.eop-nam10.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource: sw730exp511.visa.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-OriginatorOrg: visainc.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ a5bc1c80-8da3-4e26-1b40-08d9e16f522c
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:198.241.159.156;CTRY:GB;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:rcrmail01.ex.ac.uk;PTR:rcrmail01.ex.ac.uk;CAT:NONE;SFS:(4636009)(47650400002)(1096003)(82960400001)(55016003)(8676002)(9686003)(8636004)(82310400004)(8936002)(83380400001)(156005)(45080400002)(53546011)(5660300002)(52536014)(9326002)(30864003)(36005)(7596003)(7696005)(336012)(166002)(33656002)(15974865002)(6916009)(6506007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 27 Jan 2022 08:31:13.8533
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5b0ea25f-beab-42e4-78d4-08d9e16f6161
+X-MS-Exchange-CrossTenant-Id: 38305e12-e15d-4ee8-88b9-c4db1c477d76
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=38305e12-e15d-4ee8-88b9-c4db1c477d76;Ip=[198.241.159.156];Helo=[SW730O365EXP013.visa.com]
+X-MS-Exchange-CrossTenant-AuthSource: sw730exp511.visa.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR10MB4407
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.9737815
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4909.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?p23LPNdn/2L5PBadETGOZNz2g9+5CR5B6ejgB/Qxa5QQ7PCji2dkMyQnIPpE?=
+ =?us-ascii?Q?rfyJ7Dc3R4VDpfIOS5RPnuX7MAVEMC5/o+fDAa0oQdI/2vu9RUX0nd/IsJJw?=
+ =?us-ascii?Q?14lt0/CFFk4kISUD9/dOFlqEX2BwEvRL3KyNQCBfOP1rPzPi15TvkhkrFHNM?=
+ =?us-ascii?Q?aYK/EpRFfByYxoL8uDdpfm2K2egvESLgZY8l6wv70pqi5mqo92/Zcy2ZtJ8O?=
+ =?us-ascii?Q?LLoLv70sGRewBIwtLKesCSRSVqgd8V6O3jPvoDh5Xf23zNmaBwIuBgA0Esqs?=
+ =?us-ascii?Q?6HaU8dGEzBP2K0NFSVKPgkmUXCEQIevBrBJ6GYHFHHZNboj54Fi3wddoUJIa?=
+ =?us-ascii?Q?a774jTh91g6rzfmA2eHhJAUH3BV0p/WDNUHL+TH5sO+P9J8k/2kXXssY/Y8G?=
+ =?us-ascii?Q?3zyzN5b/wnaqkRWrf6dg1e//mJq1B/89bQ63gsF9IBCNH7dRD9wPGGNGujSr?=
+ =?us-ascii?Q?k2Thlt/Kvk3DImO6IDtt1Xec8Kwu9747tWgIsan3HsnGGdw8UH/O+ywMzSY6?=
+ =?us-ascii?Q?4EXy1ean3dCgUpHJmi57TSZqWQVFFYx+GANovgv51A9ueMNlQKLg+2wRvSbF?=
+ =?us-ascii?Q?dc5r84f9HAiF6e5x4BmB0I94u8O4p8l7AxbnrlHNE9mgpRzHn/JjKd3t5EZZ?=
+ =?us-ascii?Q?kIiXCpD3Hup1DFpWuOsGgpS55eY8PoBuWnChsb6P5rlWdJ6+d9f99p32EIrn?=
+ =?us-ascii?Q?Fd9IJnFm54Gm8sssxegmz8k9ux4rYZ0XaP2S5VWp9qvw9f+XWW27r5QT+U2O?=
+ =?us-ascii?Q?85YsDB6ipvLEWDy9vlKNx70c3uF7lOqZgIwUoFQFg8U3V+dVLXiUHopSGsKI?=
+ =?us-ascii?Q?IqFXRZZQKiIELoRYsiSRp6S55yND7oWxzWCb108kra3gu2yqjbuwYuV7YiBE?=
+ =?us-ascii?Q?S4HUZRHjdb+uT4u+P2RCpFo4JfMGsQrkYsLI4sxj4m46FG7Pg2u+22BDtd8I?=
+ =?us-ascii?Q?jJxNtwALhUbkBRxdbR9I8Q7gd+UKpRBW5TORjXaTp4rn615qua+1c3LGnt9I?=
+ =?us-ascii?Q?9Ed0D0XEng4Vv0qkDOCI52RIYy0i3ksCZiwcjILGIQI7R7mzV+ZoaXuNgS95?=
+ =?us-ascii?Q?3IGPQLW3TuVj+1/DooDPGM7hO/63wTWnaW1sZBPxS+66qxYlArcE8Ww4oyJP?=
+ =?us-ascii?Q?UrhEJqBGSFM9c0upz43XeLzkA+iV5wCw0NfwrS631MKU6+IAjD+JfOgYOT1z?=
+ =?us-ascii?Q?uvYTAryeXnlb3Cr5PyXwwbHOZgHsPSC82NeszO35uOLsvxs6zIgCLmX8J2kb?=
+ =?us-ascii?Q?XArgzmHHFla5nfRvIExTa/5A7jOgHlcDuZ2OqiJWi9KnGIiHqyRd1QQZ58ao?=
+ =?us-ascii?Q?nTIwdlV2Y/Pxeoe1dGaRMAZ/Sy4nn/Y1ciXmZyrUNkfCZD10o5dQivfaAQ3w?=
+ =?us-ascii?Q?7kBwoC5yd5S3h1L4s2xLpq2It1ro2JBOjJr+uSB8nvCnJHSUZTJGZEzx8AUi?=
+ =?us-ascii?Q?dmlsFUdYvNLSlSEWcxwEZn+e8MQEnelGqcpz+1olrHz12klbYNTqJ9eJHdHX?=
+ =?us-ascii?Q?BLGsh5tePPbwnAOkU9t31ece1lVtdHVNZGMcVmIx3+1OmMia8A0JhHzF+Uva?=
+ =?us-ascii?Q?kd8h1/VrR22UY+Tsfsw8mDHWqgc7nXhzBo3xkNa4SRT9uvsCZfG7Cdi8IhCo?=
+ =?us-ascii?Q?Mfy1zDHGh2GrzMaFso/t+yTiC8L8c35Bb5NN5mpoDN3WDVgoDBm5Y/NcwUp2?=
+ =?us-ascii?Q?Twi4Vct6cMmAWZfr7AQ24i+VCwU7xauZkpUfJZ7TrIa9TYRlWogKJuub0jmN?=
+ =?us-ascii?Q?zhjrIppbt/llc6NMpN0jGFZh685m/Ao//DqmoSz+/f+oONerls7lFbpudDDm?=
+ =?us-ascii?Q?fVZ5ESgW3iwA5Wxt/l5vahYvfun4NC/NWkizNoYg+z/vH6Qf06Get4U7Fc+7?=
+ =?us-ascii?Q?ppeUofUFlt58m3kYStZbvj9oQ0IRgUzAdLhQVz3T9bBeuWq8XIyhv6Z6MvHS?=
+X-MS-Exchange-Safelinks-Url-KeyVer: 1
+Content-type: multipart/alternative;
+	boundary="B_3739166945_2553918445"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3739166945_2553918445
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Hi Syed,
+
+=20
+
+Thanks for your email.  Our UKPRN is: 10007792
+
+=20
+
+And your ULN is: 6181030114
+
+=20
+
+Best wishes
+
+
+Sarah
+
+=20
+
+Sarah Niles=20
+Education Support Advisor (Degree Apprenticeships)
+
+University of Exeter
+
+www.exeter.ac.uk=20
+Innovation Centre, Rennes Drive, Exeter, UK, EX4 4RN
+
+This email and any attachment may contain information that is confidential,=
+ privileged, or subject to copyright, and which may be exempt from disclosur=
+e under applicable legislation. It is intended for the addressee only. If yo=
+u received this message in error, please let me know and delete the email an=
+d any attachments immediately. The University will not accept responsibility=
+ for the accuracy/completeness of this email and its attachments.=20
+
+=20
+
+=20
+
+=20
+
+From: SYED, JAVEDHUSSAIN <jasyed@visa.com>=20
+Sent: 26 January 2022 17:38
+To: Niles, Sarah <S.Niles2@exeter.ac.uk>
+Subject: Re: Completed: Please DocuSign: Javedhussain, Syed AA.pdf, Javedhu=
+ssain, Syed CS.docx
+
+=20
+
+CAUTION: This email originated from outside of the organisation. Do not cli=
+ck links or open attachments unless you recognise the sender and know the co=
+ntent is safe.
+
+=20
+
+Hi Sarah,
+
+=20
+
+Good Day=E2=80=A6.! Hope you are doing well.
+
+=20
+
+Being a student of University of Exeter, do I=E2=80=99m eligible for Student Appr=
+entice Oyster Card ?
+
+=20
+
+As while applying it is asking me to enter ULN and UKPRN numbers, can you p=
+lease provide me a guidance.
+
+=20
+
+Thanks =E2=80=93 Syed.
+
+=20
+
+=20
+
+From: DocuSign EU System <dse@eumail.docusign.net> on behalf of Sarah Niles=
+ via DocuSign <dse@eumail.docusign.net>
+Reply to: Sarah Niles <S.Niles2@exeter.ac.uk>
+Date: Wednesday, 19 January 2022 at 13:55
+To: "SYED, JAVEDHUSSAIN" <jasyed@visa.com>
+Subject: Completed: Please DocuSign: Javedhussain, Syed AA.pdf, Javedhussai=
+n, Syed CS.docx
+
+=20
+
+Your document has been completed=20
+=20
+
+      VIEW COMPLETED DOCUMENTS      =20
+Sarah Niles=20
+S.Niles2@exeter.ac.uk
+All parties have signed the envelope 'Please DocuSign: Javedhussain, Syed A=
+A.pdf, Javedhussain, Syed CS.docx'.
+
+Dear all, Please find attached the commitment statement and apprenticeship =
+agreement to be signed. This needs to be completed prior to the course start=
+ing on 24/01/2022. If you have any questions please contact the Education Su=
+pport Lead - Sarah - s.niles2@exeter.ac.uk
+
+Powered by=20
+Do Not Share This Email
+This e-mail contains a secure link to DocuSign. Please do not share this e-=
+mail, link or access code with others.
+
+Alternative Signing Method
+Visit DocuSign.co.uk, click 'Access Documents', and enter the security code=
+:
+E89F9AACFB3D4FC6B402D8B10A0951A14=20
+
+About DocuSign
+Sign documents electronically in just minutes. It's safe, secure and legall=
+y binding. Whether you're in an office, at home, on-the-go =E2=80=93 or even acros=
+s the globe =E2=80=93 DocuSign provides a professional, trusted solution for Digit=
+al Transaction Management=E2=84=A2.=20
+
+Questions about the Document?
+If you need to modify the document or have questions about the details in t=
+he document, please contact the sender by emailing them directly.
+
+Stop receiving this email
+Report this email or read more about Declining to sign and Managing notific=
+ations.
+
+If you are having trouble signing the document, please visit the Help with =
+Signing page on our Support Centre.
+
+Download the DocuSign App=20
+
+This message was sent to you by Sarah Niles who is using the DocuSign Elect=
+ronic Signature Service. If you would rather not receive e-mail from this se=
+nder you may contact the sender with your request.
+
+=20
+
+=20
+
+
+Please consider the environment before printing this email.
+
+This email (including attachments) is confidential and is solely intended f=
+or the addressee. Unless you are the addressee, you may not read, use or sto=
+re this email in any way, or permit others to. If you have received it in er=
+ror, please contact Visa Europe on +44 (0)20 7937 8111.
+
+Visa Europe Limited (company number 05139966) is a company incorporated in =
+England and Wales, and whose registered office is at 1 Sheldon Square, Londo=
+n, W2 6TT.
+
+
+--B_3739166945_2553918445
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsof=
+t-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" xmlns:m=
+=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org=
+/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta na=
+me=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)"><!--[if !mso]><=
+style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><title>RecipientEnvelopeComplete</title><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+span.EmailStyle21
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body bgcolor=3D"#EAEAEA" lang=3D"EN-G=
+B" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:break-word"><div class=3D"WordS=
+ection1"><p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Hi Sy=
+ed,<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso-fareast-langu=
+age:EN-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso=
+-fareast-language:EN-US">Thanks for your email.&nbsp; Our UKPRN is: 10007792=
+<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso-fareast-language=
+:EN-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso-fa=
+reast-language:EN-US">And your ULN is: 6181030114<o:p></o:p></span></p><p cl=
+ass=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbsp;</o:p></=
+span></p><p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Best =
+wishes<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso-fareast-la=
+nguage:EN-US"><br>Sarah</span><o:p></o:p></p><p class=3D"MsoNormal"><b><span s=
+tyle=3D"color:#767171"><o:p>&nbsp;</o:p></span></b></p><p class=3D"MsoNormal"><b=
+><span style=3D"color:#767171">Sarah Niles</span></b><span style=3D"color:#76717=
+1"> <br><span style=3D"background:white">Education Support Advisor (Degree App=
+renticeships</span>)<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"=
+color:#767171">University of Exeter<o:p></o:p></span></p><p class=3D"MsoNormal=
+"><span style=3D"color:#767171"><a href=3D"https://nam10.safelinks.protection.ou=
+tlook.com/?url=3Dhttp%3A%2F%2Fwww.exeter.ac.uk%2F&amp;data=3D04%7C01%7Cjasyed%40=
+visa.com%7C5b0ea25fbeab42e478d408d9e16f6161%7C38305e12e15d4ee888b9c4db1c477d=
+76%7C0%7C0%7C637788690770640394%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAi=
+LCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=3DwuIqv72I%2Ft=
+vd9M1L1aJqouOaUA5BNBdl%2BiGLcBWUnMU%3D&amp;reserved=3D0" originalsrc=3D"http://w=
+ww.exeter.ac.uk/" shash=3D"nrdYzHamG/ST5Dp1vsjs0hnO/sHEk0nL2SpSuuync68s8Qb63DA=
+8YgjGc1Vf5vtWRySbbpfBeWIMV6h/yxW4rRL1FGu+ezvY3vDbZJ/mMuAi+2WEOnz/d1y64WenuCr=
+bbJWHKBBTO3Kd8HCr/n3tApiZszbJwyPWfT63aLNaHhQ=3D"><span style=3D"color:#767171">w=
+ww.exeter.ac.uk</span></a> <br>Innovation Centre, Rennes Drive, Exeter, UK, =
+EX4 4RN</span><span style=3D"mso-fareast-language:EN-US"><o:p></o:p></span></p=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto"><span style=3D"color:gray"><img border=3D"0" width=3D"600" height=3D"117" style=
+=3D"width:6.25in;height:1.2152in" id=3D"_x0000_i1034" src=3D"http://www.exeter.ac.=
+uk/codebox/email-sig/staff-sig.gif"></span><span style=3D"color:gray"><o:p></o=
+:p></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto"><span style=3D"font-size:9.0pt;color:gray">This email and an=
+y attachment may contain information that is confidential, privileged, or su=
+bject to copyright, and which may be exempt from disclosure under applicable=
+ legislation. It is intended for the addressee only. If you received this me=
+ssage in error, please let me know and delete the email and any attachments =
+immediately. The University will not accept responsibility for the accuracy/=
+completeness of this email and its attachments. <o:p></o:p></span></p><p cla=
+ss=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal"><span style=3D"mso-fa=
+reast-language:EN-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span=
+ style=3D"mso-fareast-language:EN-US"><o:p>&nbsp;</o:p></span></p><div><div st=
+yle=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm"><=
+p class=3D"MsoNormal"><b><span lang=3D"EN-US">From:</span></b><span lang=3D"EN-US"=
+> SYED, JAVEDHUSSAIN &lt;jasyed@visa.com&gt; <br><b>Sent:</b> 26 January 202=
+2 17:38<br><b>To:</b> Niles, Sarah &lt;S.Niles2@exeter.ac.uk&gt;<br><b>Subje=
+ct:</b> Re: Completed: Please DocuSign: Javedhussain, Syed AA.pdf, Javedhuss=
+ain, Syed CS.docx<o:p></o:p></span></p></div></div><p class=3D"MsoNormal"><o:p=
+>&nbsp;</o:p></p><div style=3D"border:solid #9C6500 1.0pt;padding:2.0pt 2.0pt =
+2.0pt 2.0pt"><p class=3D"MsoNormal" style=3D"line-height:12.0pt;background:#FFEB=
+9C"><b><span style=3D"font-size:10.0pt;color:#9C6500">CAUTION:</span></b><span=
+ style=3D"font-size:10.0pt;color:black"> This email originated from outside of=
+ the organisation. Do not click links or open attachments unless you recogni=
+se the sender and know the content is safe.<o:p></o:p></span></p></div><p cl=
+ass=3D"MsoNormal"><o:p>&nbsp;</o:p></p><div><p class=3D"MsoNormal"><span style=3D"=
+mso-fareast-language:EN-US">Hi Sarah,<o:p></o:p></span></p><p class=3D"MsoNorm=
+al"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbsp;</o:p></span></p><p =
+class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Good Day=E2=80=A6.! Hop=
+e you are doing well.<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D=
+"mso-fareast-language:EN-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal=
+"><span style=3D"mso-fareast-language:EN-US">Being a student of <i>University =
+of Exeter</i>, do I=E2=80=99m eligible for <b>Student Apprentice Oyster Card</b> ?=
+<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso-fareast-language=
+:EN-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso-fa=
+reast-language:EN-US">As while applying it is asking me to enter ULN and UKP=
+RN numbers, can you please provide me a guidance.<o:p></o:p></span></p><p cl=
+ass=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbsp;</o:p></=
+span></p><p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Thank=
+s =E2=80=93 Syed.<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"mso-farea=
+st-language:EN-US"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span st=
+yle=3D"mso-fareast-language:EN-US"><o:p>&nbsp;</o:p></span></p><div style=3D"bor=
+der:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm"><p class=3D=
+"MsoNormal"><b><span lang=3D"EN" style=3D"font-size:12.0pt;color:black">From: </=
+span></b><span lang=3D"EN" style=3D"font-size:12.0pt;color:black">DocuSign EU Sy=
+stem &lt;<a href=3D"mailto:dse@eumail.docusign.net">dse@eumail.docusign.net</a=
+>&gt; on behalf of Sarah Niles via DocuSign &lt;<a href=3D"mailto:dse@eumail.d=
+ocusign.net">dse@eumail.docusign.net</a>&gt;<br><b>Reply to: </b>Sarah Niles=
+ &lt;<a href=3D"mailto:S.Niles2@exeter.ac.uk">S.Niles2@exeter.ac.uk</a>&gt;<br=
+><b>Date: </b>Wednesday, 19 January 2022 at 13:55<br><b>To: </b>&quot;SYED, =
+JAVEDHUSSAIN&quot; &lt;<a href=3D"mailto:jasyed@visa.com">jasyed@visa.com</a>&=
+gt;<br><b>Subject: </b>Completed: Please DocuSign: Javedhussain, Syed AA.pdf=
+, Javedhussain, Syed CS.docx<o:p></o:p></span></p></div><div><p class=3D"MsoNo=
+rmal"><span lang=3D"EN" style=3D"font-family:&quot;Helvetica&quot;,sans-serif"><=
+o:p>&nbsp;</o:p></span></p></div><div align=3D"center"><table class=3D"MsoNormal=
+Table" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:=
+100.0%"><tbody><tr><td style=3D"padding:0cm 0cm 0cm 0cm"></td><td width=3D"640" =
+style=3D"width:480.0pt;padding:0cm 0cm 0cm 0cm"><table class=3D"MsoNormalTable" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"max-width:480.0pt;backgrou=
+nd:white;border-collapse:collapse"><tbody><tr><td style=3D"padding:7.5pt 18.0p=
+t 7.5pt 18.0pt"><p class=3D"MsoNormal"><span style=3D"color:black"><span style=3D"=
+border:solid windowtext 1.0pt;padding:0cm"><img border=3D"0" width=3D"32" height=
+=3D"32" style=3D"width:.3333in;height:.3333in" id=3D"_x0000_i1033" src=3D"cid:~WRD00=
+00.jpg" alt=3D"Image removed by sender."></span></span><o:p></o:p></p></td></t=
+r><tr><td style=3D"padding:0cm 18.0pt 22.5pt 18.0pt;border-radius:2px"><div al=
+ign=3D"center"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" width=3D"100%" style=3D"width:100.0%;background:#214E9F"><tbody><tr><t=
+d width=3D"100%" style=3D"width:100.0%;padding:21.0pt 7.5pt 27.0pt 7.5pt"><p cla=
+ss=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span style=3D"font-si=
+ze:12.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:white;border:so=
+lid windowtext 1.0pt;padding:0cm"><img border=3D"0" width=3D"75" height=3D"75" sty=
+le=3D"width:.7777in;height:.7777in" id=3D"_x0000_i1032" src=3D"cid:~WRD0000.jpg" a=
+lt=3D"Image removed by sender."></span><span style=3D"font-size:12.0pt;font-fami=
+ly:&quot;Helvetica&quot;,sans-serif;color:white"><o:p></o:p></span></p><div =
+align=3D"center"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" width=3D"100%" style=3D"width:100.0%"><tbody><tr><td style=3D"padding:=
+18.0pt 0cm 0cm 0cm"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:ce=
+nter"><span style=3D"font-size:12.0pt;font-family:&quot;Helvetica&quot;,sans-s=
+erif;color:white">Your document has been completed <o:p></o:p></span></p></t=
+d></tr></tbody></table></div><p class=3D"MsoNormal" align=3D"center" style=3D"text=
+-align:center"><span style=3D"font-size:12.0pt;font-family:&quot;Helvetica&quo=
+t;,sans-serif;color:white"><o:p>&nbsp;</o:p></span></p><div align=3D"center"><=
+table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100.0%;border-radius:2px"><tbody><tr><td style=3D"paddin=
+g:22.5pt 0cm 0cm 0cm;border-radius:2px"><div><div align=3D"center"><table clas=
+s=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"display=
+:inline-block"><tbody><tr style=3D"height:33.0pt"><td style=3D"border:solid whit=
+e 1.0pt;background:#214E9F;padding:0cm 0cm 0cm 0cm;height:33.0pt;border-radi=
+us:2px"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><sp=
+an style=3D"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;colo=
+r:white"><a href=3D"https://nam10.safelinks.protection.outlook.com/?url=3Dhttps%=
+3A%2F%2Feu.docusign.net%2FMember%2FEmailStart.aspx%3Fa%3De89f9aac-fb3d-4fc6-=
+b402-d8b10a0951a1%26r%3Df5e7cf58-db63-43e4-8eee-27c937204db0&amp;data=3D04%7C0=
+1%7Cjasyed%40visa.com%7C5b0ea25fbeab42e478d408d9e16f6161%7C38305e12e15d4ee88=
+8b9c4db1c477d76%7C0%7C0%7C637788690770650349%7CUnknown%7CTWFpbGZsb3d8eyJWIjo=
+iMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=
+=3DQXFDUJvEAegrt0rnzuuHl5gm2ThORA2N4vhQBNGkRlw%3D&amp;reserved=3D0" originalsrc=3D=
+"https://eu.docusign.net/Member/EmailStart.aspx?a=3De89f9aac-fb3d-4fc6-b402-d8=
+b10a0951a1&amp;r=3Df5e7cf58-db63-43e4-8eee-27c937204db0" shash=3D"k4Y57gRRJpKiUa=
+mjQnDOoaR72OKuhUCqfmelPayVXjgONygDiwvKXmUoszeo7F7mCcEKsDyAkGzneqd5qoyYge35lL=
+8vx7vZ4ouxxUkC84itaHTTODoaPwk9a5zlojEWTbedmSwRQJ0G9FiAScgj3gU1IQIxo/FxMLJAWb=
+s7r6I=3D"><span style=3D"color:white;background:#214E9F;text-decoration:none">&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VIEW COMPLETED DOCUMENTS&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp; </span></a><o:p></o:p></span></b></p></td></tr></tbody></=
+table></div></div></td></tr></tbody></table></div><p class=3D"MsoNormal" align=
+=3D"center" style=3D"text-align:center"><o:p></o:p></p></td></tr></tbody></table=
+></div></td></tr><tr><td style=3D"padding:0cm 18.0pt 18.0pt 18.0pt"><table cla=
+ss=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><t=
+d style=3D"padding:0cm 0cm 15.0pt 0cm"><div><p class=3D"MsoNormal" style=3D"line-h=
+eight:13.5pt"><b><span style=3D"font-size:11.5pt;font-family:&quot;Helvetica&q=
+uot;,sans-serif;color:#333333">Sarah Niles <o:p></o:p></span></b></p></div><=
+div><p class=3D"MsoNormal" style=3D"line-height:13.5pt"><span style=3D"font-size:1=
+1.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#666666"><a href=3D"m=
+ailto:S.Niles2@exeter.ac.uk">S.Niles2@exeter.ac.uk</a><o:p></o:p></span></p>=
+</div></td></tr></tbody></table><p style=3D"line-height:15.0pt"><span style=3D"f=
+ont-size:11.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#333333">=
+All parties have signed the envelope 'Please DocuSign: Javedhussain, Syed AA=
+.pdf, Javedhussain, Syed CS.docx'.<o:p></o:p></span></p><p style=3D"line-heigh=
+t:15.0pt"><span style=3D"font-size:11.5pt;font-family:&quot;Helvetica&quot;,sa=
+ns-serif;color:#333333">Dear all, Please find attached the commitment statem=
+ent and apprenticeship agreement to be signed. This needs to be completed pr=
+ior to the course starting on 24/01/2022. If you have any questions please c=
+ontact the Education Support Lead - Sarah - <a href=3D"mailto:s.niles2@exeter.=
+ac.uk">s.niles2@exeter.ac.uk</a><o:p></o:p></span></p></td></tr><tr><td styl=
+e=3D"padding:0cm 18.0pt 9.0pt 18.0pt"><table class=3D"MsoNormalTable" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top" style=3D"padding:=
+0cm 0cm 0cm 0cm"><div><p class=3D"MsoNormal"><span style=3D"font-size:8.5pt;font=
+-family:&quot;Helvetica&quot;,sans-serif;color:#666666">Powered by&nbsp;<o:p=
+></o:p></span></p></div></td><td style=3D"padding:0cm 0cm 0cm 0cm"><p class=3D"M=
+soNormal"><span style=3D"border:solid windowtext 1.0pt;padding:0cm"><img borde=
+r=3D"0" width=3D"19" height=3D"19" style=3D"width:.2013in;height:.2013in" id=3D"_x0000=
+_i1031" src=3D"cid:~WRD0000.jpg" alt=3D"Image removed by sender. DocuSign"></spa=
+n><o:p></o:p></p></td></tr></tbody></table></td></tr><tr><td style=3D"backgrou=
+nd:#EAEAEA;padding:22.5pt 18.0pt 33.75pt 18.0pt"><p style=3D"margin-bottom:12.=
+0pt;line-height:13.5pt"><b><span style=3D"font-size:10.0pt;font-family:&quot;H=
+elvetica&quot;,sans-serif;color:#666666">Do Not Share This Email</span></b><=
+span style=3D"font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;co=
+lor:#666666"><br>This e-mail contains a secure link to DocuSign. Please do n=
+ot share this e-mail, link or access code with others.<o:p></o:p></span></p>=
+<p style=3D"margin-bottom:12.0pt;line-height:13.5pt"><b><span style=3D"font-size=
+:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#666666">Alternat=
+ive Signing Method</span></b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Helvetica&quot;,sans-serif;color:#666666"><br>Visit DocuSign.co.uk, click '=
+Access Documents', and enter the security code:<br>E89F9AACFB3D4FC6B402D8B10=
+A0951A14 <o:p></o:p></span></p><p style=3D"margin-bottom:12.0pt;line-height:13=
+.5pt"><b><span style=3D"font-size:10.0pt;font-family:&quot;Helvetica&quot;,san=
+s-serif;color:#666666">About DocuSign</span></b><span style=3D"font-size:10.0p=
+t;font-family:&quot;Helvetica&quot;,sans-serif;color:#666666"><br>Sign docum=
+ents electronically in just minutes. It's safe, secure and legally binding. =
+Whether you're in an office, at home, on-the-go =E2=80=93 or even across the globe=
+ =E2=80=93 DocuSign provides a professional, trusted solution for Digital Transact=
+ion Management=E2=84=A2. <o:p></o:p></span></p><p style=3D"margin-bottom:12.0pt;line=
+-height:13.5pt"><b><span style=3D"font-size:10.0pt;font-family:&quot;Helvetica=
+&quot;,sans-serif;color:#666666">Questions about the Document?</span></b><sp=
+an style=3D"font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;colo=
+r:#666666"><br>If you need to modify the document or have questions about th=
+e details in the document, please contact the sender by emailing them direct=
+ly.<br><br><b>Stop receiving this email</b><br><a href=3D"https://nam10.safeli=
+nks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fprotect.docusign.net%2Freport-=
+abuse%3Fe%3DAUtomjpFak9GlbPL0zFFi11X-aSPALYKIKCQPFxHkdMCknDdIAt6tzPBIH66Ax4N=
+miSvkOAw2A0VSUk5V6VXQEyPf-hHNaWZQ5EsJdB6rzN4IYsHkR1hTV0C-93iIEc46MHYmh3OXy0w=
+lisz1X69JMkeVSpB5HqP4rc5dq-BS_a_rprQJ0CxU-7qwTgg5cRHFdu1m86WVkZrTjHZtgAzdJNS=
+bxtOF7i3D8c2zerFCYfog56ix5g9MUpjpMArSet-WWxMnX1abYWARruuDRIGZNn5cNrsYblLbKoL=
+5W7nq_IjiTgcYBM73wGhMaOeFirnnZHfI_d98nnHYFGTEblytxBoPSzP8lwqGIGch-EyLiFph5_r=
+4SHIYAp9cLAo4zPT2qc5L2fA4UUssz4A0mTKrh2QwfGhXn-FnDljqoaBL19MI4haEt9h0Z7NQ_XJ=
+sUcRRA%26lang%3Den-GB&amp;data=3D04%7C01%7Cjasyed%40visa.com%7C5b0ea25fbeab42e=
+478d408d9e16f6161%7C38305e12e15d4ee888b9c4db1c477d76%7C0%7C0%7C6377886907706=
+50349%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik=
+1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=3D5jpNxjECksUu%2B2gYEqQVjphniYprmbiTCpjY=
+ghv0o%2FM%3D&amp;reserved=3D0" originalsrc=3D"https://protect.docusign.net/repor=
+t-abuse?e=3DAUtomjpFak9GlbPL0zFFi11X-aSPALYKIKCQPFxHkdMCknDdIAt6tzPBIH66Ax4Nmi=
+SvkOAw2A0VSUk5V6VXQEyPf-hHNaWZQ5EsJdB6rzN4IYsHkR1hTV0C-93iIEc46MHYmh3OXy0wli=
+sz1X69JMkeVSpB5HqP4rc5dq-BS_a_rprQJ0CxU-7qwTgg5cRHFdu1m86WVkZrTjHZtgAzdJNSbx=
+tOF7i3D8c2zerFCYfog56ix5g9MUpjpMArSet-WWxMnX1abYWARruuDRIGZNn5cNrsYblLbKoL5W=
+7nq_IjiTgcYBM73wGhMaOeFirnnZHfI_d98nnHYFGTEblytxBoPSzP8lwqGIGch-EyLiFph5_r4S=
+HIYAp9cLAo4zPT2qc5L2fA4UUssz4A0mTKrh2QwfGhXn-FnDljqoaBL19MI4haEt9h0Z7NQ_XJsU=
+cRRA&amp;lang=3Den-GB" shash=3D"vMXtc+xUdpltwgFYgcsIrYHMHWG3sDpK01B3MIC0Ex/lv0IK=
+wrO4deeuf8dVD1WBFgfXILVy2/5td8s7mSU3IXI60zDbOISdCkLLWwt/6WMNFg96fKDxbCGaV9X3=
+xUTwaOr/4apulnI6k3j+IAdECC0lA+ldmNVn5RcKKlNxqX8=3D"><span style=3D"color:#2463D1=
+">Report this email</span></a> or read more about <a href=3D"https://nam10.saf=
+elinks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fsupport.docusign.com%2Fen%2=
+Fguides%2FDeclining-to-sign-DocuSign-Signer-Guide&amp;data=3D04%7C01%7Cjasyed%=
+40visa.com%7C5b0ea25fbeab42e478d408d9e16f6161%7C38305e12e15d4ee888b9c4db1c47=
+7d76%7C0%7C0%7C637788690770660306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMD=
+AiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=3DeulXCePdgN=
+wsagQpfab6PYPAOe9oV6eUjF3JZYey%2F44%3D&amp;reserved=3D0" originalsrc=3D"https://=
+support.docusign.com/en/guides/Declining-to-sign-DocuSign-Signer-Guide" shas=
+h=3D"RvQjQNUHALDIwadA+TBSQbCp2rMD07ckBFMYfrhiJ+s47GkJUxcPbl5mywIG4OTUZmMy3Kybf=
+l5OBVp06tbPbbbO4dHphSuIQlfno1f5PtI+1+AI765NTXtlu06W7+lU/mPyjv9HX48XXHPClIKBX=
+19h6QQPD6DACPh9aOuUjfw=3D"><span style=3D"color:#2463D1">Declining to sign</span=
+></a> and <a href=3D"https://nam10.safelinks.protection.outlook.com/?url=3Dhttps=
+%3A%2F%2Fsupport.docusign.com%2Fen%2Farticles%2FHow-do-I-manage-my-email-not=
+ifications&amp;data=3D04%7C01%7Cjasyed%40visa.com%7C5b0ea25fbeab42e478d408d9e1=
+6f6161%7C38305e12e15d4ee888b9c4db1c477d76%7C0%7C0%7C637788690770660306%7CUnk=
+nown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXV=
+CI6Mn0%3D%7C3000&amp;sdata=3DJwx%2FiwsfdkbuZeXDxs0AecmNBB%2BDHCYnulf47mi14qA%3=
+D&amp;reserved=3D0" originalsrc=3D"https://support.docusign.com/en/articles/How-=
+do-I-manage-my-email-notifications" shash=3D"ARr7CY8xpjUMXiTV0eGoLlNVKM95Fv7Zv=
+/6HVtwPB6h0qTwfz9ObBBkUT5oH/aH+K2Z7qvByNnAw03wTp2JerQloqo/K/J2KGPLyqeT5JQYnX=
+o8Ao4/iGja0Jl3527dRlBMNMzoB/aGEW5I4HXjwcB2EjiwEZkIQzavqj9wo3zk=3D"><span style=
+=3D"color:#2463D1">Managing notifications</span></a>.<br><br>If you are having=
+ trouble signing the document, please visit the <a href=3D"https://nam10.safel=
+inks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fsupport.docusign.com%2Farticl=
+es%2FHow-do-I-sign-a-DocuSign-document-Basic-Signing&amp;data=3D04%7C01%7Cjasy=
+ed%40visa.com%7C5b0ea25fbeab42e478d408d9e16f6161%7C38305e12e15d4ee888b9c4db1=
+c477d76%7C0%7C0%7C637788690770670262%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjA=
+wMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=3DcVOOZNN=
+rOd%2FcB88U1Aw0%2BpsnCWZoPqrYstpuNbpnR0E%3D&amp;reserved=3D0" originalsrc=3D"htt=
+ps://support.docusign.com/articles/How-do-I-sign-a-DocuSign-document-Basic-S=
+igning" shash=3D"YJFxWQ74huLVP3/Drh+20galKorZvs+uyAWkyaIPb/Iax5/MRMlxyt5gVVlzp=
+HabOpMsS4Nj8sitQUh5lnQN+TGwhEKYoNwUePTkn+J9ilAXCAp0w2+95WWhxP/3Wzbm89257AUnh=
+JzErzqxAbH87BqCICv0fw3cOL+nNMk8O0s=3D"><span style=3D"color:#2463D1">Help with S=
+igning</span></a> page on our <a href=3D"https://nam10.safelinks.protection.ou=
+tlook.com/?url=3Dhttps%3A%2F%2Fwww.docusign.co.uk%2Fsupport&amp;data=3D04%7C01%7=
+Cjasyed%40visa.com%7C5b0ea25fbeab42e478d408d9e16f6161%7C38305e12e15d4ee888b9=
+c4db1c477d76%7C0%7C0%7C637788690770670262%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC=
+4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=3DjT=
+4PbeWkPieUAYfn%2Bhv8e2GvITqLMYE56jkd6THSIdI%3D&amp;reserved=3D0" originalsrc=3D"=
+https://www.docusign.co.uk/support" shash=3D"voe8O47jNYgoDaS8gz+fl93ft20Y6qype=
+XbxN/jxBuHYEPYzL/evCVsb37Dq4UTEN8L3flI7jFMZ4xk94QFhaesSSrdbOwH9WySqPl7SWIXGb=
+1JygW9NmHWs/xvi6uj+Ixecqrz41kZaO7DuuWseUk8J7Nrqstfs+cHovha1klU=3D"><span style=
+=3D"color:#2463D1">Support Centre</span></a>.<o:p></o:p></span></p><p style=3D"m=
+argin-bottom:12.0pt;line-height:13.5pt"><span style=3D"font-size:10.0pt;font-f=
+amily:&quot;Helvetica&quot;,sans-serif;color:#666666"><a href=3D"https://nam10=
+.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fwww.docusign.co.uk%2Ffe=
+atures-and-benefits%2Fmobile&amp;data=3D04%7C01%7Cjasyed%40visa.com%7C5b0ea25f=
+beab42e478d408d9e16f6161%7C38305e12e15d4ee888b9c4db1c477d76%7C0%7C0%7C637788=
+690770680221%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJ=
+BTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;sdata=3D3CJnVkKctLjy3W3sM71WFuMHSsHF5dt=
+aE6tLyP7Goew%3D&amp;reserved=3D0" originalsrc=3D"https://www.docusign.co.uk/feat=
+ures-and-benefits/mobile" shash=3D"HbOZNhfnbR+S/PRcCRmmgY26xWWgPZ6hT0Iik2p4FEi=
+VnYKkPpCVRRnWfmsGH4nuMglOw25tJt/rAFi4NGgMFdb4oNJjjdbxpCcss3ifkC0vhZuLYgUawIL=
+yQCDIvBLfh3I2+AaWuD7Vw4ZxjUUebim+VrqHUfD7N53Z8pfHBCc=3D"><span style=3D"color:#2=
+463D1;border:solid windowtext 1.0pt;padding:0cm;text-decoration:none"><img b=
+order=3D"0" width=3D"18" height=3D"18" style=3D"width:.1875in;height:.1875in" id=3D"_x=
+0000_i1030" src=3D"cid:~WRD0000.jpg" alt=3D"Image removed by sender."></span><sp=
+an style=3D"color:#2463D1">Download the DocuSign App </span></a><o:p></o:p></s=
+pan></p><p style=3D"margin-bottom:12.0pt;line-height:10.5pt"><span style=3D"font=
+-size:7.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#666666">This=
+ message was sent to you by Sarah Niles who is using the DocuSign Electronic=
+ Signature Service. If you would rather not receive e-mail from this sender =
+you may contact the sender with your request.<o:p></o:p></span></p></td></tr=
+></tbody></table></td><td style=3D"padding:0cm 0cm 0cm 0cm"></td></tr></tbody>=
+</table></div><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal"=
+><o:p>&nbsp;</o:p></p><div class=3D"MsoNormal" align=3D"center" style=3D"text-alig=
+n:center"><hr size=3D"2" width=3D"100%" align=3D"center"></div><p class=3D"MsoNormal=
+"><span style=3D"font-size:7.5pt;font-family:&quot;Arial&quot;,sans-serif;colo=
+r:gray"><br>Please consider the environment before printing this email.<br><=
+br>This email (including attachments) is confidential and is solely intended=
+ for the addressee. Unless you are the addressee, you may not read, use or s=
+tore this email in any way, or permit others to. If you have received it in =
+error, please contact Visa Europe on +44 (0)20 7937 8111.<br><br>Visa Europe=
+ Limited (company number 05139966) is a company incorporated in England and =
+Wales, and whose registered office is at 1 Sheldon Square, London, W2 6TT.</=
+span><o:p></o:p></p></div></div></body></html>
+
+--B_3739166945_2553918445--
+
