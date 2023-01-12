@@ -1,0 +1,450 @@
+Received: from BN0PR10MB4839.namprd10.prod.outlook.com (2603:10b6:408:126::10)
+ by PH0PR10MB5516.namprd10.prod.outlook.com with HTTPS; Wed, 24 Nov 2021
+ 11:15:46 +0000
+Authentication-Results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=visa.com;
+Received: from BN0PR10MB5032.namprd10.prod.outlook.com (2603:10b6:408:122::5)
+ by BN0PR10MB4839.namprd10.prod.outlook.com (2603:10b6:408:126::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4734.22; Wed, 24 Nov
+ 2021 11:15:45 +0000
+Received: from BN0PR10MB5032.namprd10.prod.outlook.com
+ ([fe80::7000:fd2c:bf65:90e7]) by BN0PR10MB5032.namprd10.prod.outlook.com
+ ([fe80::7000:fd2c:bf65:90e7%3]) with mapi id 15.20.4713.025; Wed, 24 Nov 2021
+ 11:15:45 +0000
+From: "Chittari, Balakrishna" <chittarb@visa.com>
+To: "SYED, JAVEDHUSSAIN" <jasyed@visa.com>
+CC: "Rizvi, Sajjad" <rizvis@visa.com>
+Subject: Re: Details of L7 Research Scientist Degree Apprenticeship (MSc Data
+ Science) information webinars - DO NOT REPLY ALL
+Thread-Topic: Details of L7 Research Scientist Degree Apprenticeship (MSc Data
+ Science) information webinars - DO NOT REPLY ALL
+Thread-Index: AdfXF6J2xTwkG2cTT4ySXKlihsEzOAJ/t3qAAAOHwQA=
+Date: Wed, 24 Nov 2021 11:15:44 +0000
+Message-ID: <A46AADB8-AF18-4923-A593-95FFAC0C027A@visa.com>
+References:
+ <LO2P265MB0942BA877520982885F3F405F5949@LO2P265MB0942.GBRP265.PROD.OUTLOOK.COM>
+ <709B4EC7-BC10-4C5A-9DF5-D4AFC78DC81B@visa.com>
+In-Reply-To: <709B4EC7-BC10-4C5A-9DF5-D4AFC78DC81B@visa.com>
+Accept-Language: en-US
+Content-Language: en-GB
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator: <A46AADB8-AF18-4923-A593-95FFAC0C027A@visa.com>
+user-agent: Microsoft-MacOutlook/16.54.21101001
+msip_labels:
+ MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Enabled=true;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Enabled=true;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Name=Not
+ Classified;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_ActionId=4420ece0-64a1-4415-842d-b09c8a5a503b;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_ContentBits=0;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_SetDate=2021-11-24T09:31:56Z;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_SiteId=38305e12-e15d-4ee8-88b9-c4db1c477d76;MSIP_Label_a0f89cb5-682d-4be4-b0e0-739c9b4a93d4_Method=Standard;
+MIME-Version: 1.0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-Exchange-Organization-AuthSource: BN0PR10MB5032.namprd10.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4635470a-4aac-40de-b7cf-08d9af3bc28c
+X-MS-PublicTrafficType: Email
+Return-Path: chittarb@visa.com
+X-MS-Exchange-Organization-ExpirationStartTime: 24 Nov 2021 11:15:45.2500
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Office365-Filtering-Correlation-Id: 4635470a-4aac-40de-b7cf-08d9af3bc28c
+X-MS-TrafficTypeDiagnostic: BN0PR10MB4839:
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Oob-TLC-OOBClassifiers: OLM:10000;
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:BN0PR10MB5032.namprd10.prod.outlook.com;PTR:;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 Nov 2021 11:15:44.9946
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 38305e12-e15d-4ee8-88b9-c4db1c477d76
+X-MS-Exchange-CrossTenant-AuthSource: BN0PR10MB5032.namprd10.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4635470a-4aac-40de-b7cf-08d9af3bc28c
+X-MS-Exchange-CrossTenant-MailboxType: HOSTED
+X-MS-Exchange-CrossTenant-UserPrincipalName: Gy/gehHS5lQRLRyTEWQyVOFLuw1rIJaq+Xbro7fb/u+tPIf+qqkVqIPkcSaKR7VagHzs9G8HhiQ6HklZhF48XQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN0PR10MB4839
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8097222
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4713.025
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	ABoNNtwx/gT5hlD7k5z8S//uDicekUDVm8ZnMYMLhDDL8nqmxMAbVpXwT0rjYyJvEj15wbeE6EOy8dfLHmafPnHW1CUXqW+u1xhBG5vdVMkU9hDPjiNmHIdQdmlE6UzHGREmzLfoljWUn0uOs4J/oo22dzDDH1v6CvR6oHD2q7UDRmOpCrE2Zepy2PktL4Xtm37NR6zRNlMChoYLAnJw/DLQPkmwirOW0PDLQeWqxtof3aay8OzRT6po+I6T0xmyS+/0c5pLZVm0iFWeEzyRJg57pvgTYvDuF+8NzY7EzA6jFJESJU6+ISFpV3Tk7VrHSPeRu0GQFMPpWhdu8K14zxubwEupBDiwE3NIybbvh4haNTb4CB6GFnzKBWtTz3iOPH1tMjTsqb37rmd4IVT8mEKJau9nFvVrmiYKrIWQlikOAJkqpfJpG5pr2ZkPcdeddCdk0bJtIFzRh2J1tnqg73LUuohuWQU+wlbr7/nsxGPw/HoTs3d7nxvQ9Vcn7mWzIyQVqa4vZAV26z4a4Y+pp1ut5PW8+HyGIlTz4XDiMBMUwnpbyk++0kMMQbFYxf4740Ht7DeYC4+eMZ2KOBoWHpnh3t7BLX0my7dofZmopcTFCZCCywExr932P6CwiUbDRHF8Nw+MZ2FNnUl69eYlMLJuxNZrUolV/GRJAcvLq9a9t+mSxRrMTLsIJ3AmY6KAJs1UWqmpsb4ZrRqrlljQbG0wqZ21gvjcv3qs1cEywpUj6ZCDyPE5c48rkfWkEgFu
+Content-type: multipart/alternative;
+	boundary="B_3720628856_1362394239"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3720628856_1362394239
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Hi Syed., Good morning=20
+
+=20
+
+As discussed, I am happy to support you on the MSc program. You can treat t=
+his as my approval.
+
+=20
+
+Please be informed that you may need more efforts than what may have been h=
+ighlighted as requirement on MSc program. This means you may have to balance=
+ MSc Program, Work and personal Life.
+
+As I am also on the MSc programme we may have to be enrolled into mutually =
+exclusive sections of the program so that we minimise any outages for work, =
+so that one of us is always present and prioritise VISA work.
+
+=20
+
+Regards, Balki
+
+Balakrishna Chittari |  Data Science Lab | Visa Europe | T +44 (0) 118 939 =
+7148 |  www.visaeurope.com
+
+=20
+
+=20
+
+From: "SYED, JAVEDHUSSAIN" <jasyed@visa.com>
+Date: Wednesday, 24 November 2021 at 09:34
+To: "Chittari, Balakrishna" <chittarb@visa.com>
+Subject: Re: Details of L7 Research Scientist Degree Apprenticeship (MSc Da=
+ta Science) information webinars - DO NOT REPLY ALL
+
+=20
+
+Hi Balki,
+
+=20
+
+Good Morning.
+
+=20
+
+I=E2=80=99m very much interested to enrol for the apprenticeship program L7 Resea=
+rch Scientist which is going to start from Jan=E2=80=9922.
+
+=20
+
+Can you please provide me your approval so that I can enrol for this progra=
+m.
+
+=20
+
+Thanks =E2=80=93 Syed.
+
+=20
+
+From: Digital Apprenticeships Mailbox <digitalapprenticeships@exeter.ac.uk>
+Date: Thursday, 11 November 2021 at 16:23
+To: Digital Apprenticeships Mailbox <digitalapprenticeships@exeter.ac.uk>
+Cc: "Taylor, Fran" <F.Taylor4@exeter.ac.uk>, "Salmon, Greg" <G.Salmon@exete=
+r.ac.uk>, "Paci, Julia" <J.C.Paci@exeter.ac.uk>
+Subject: Details of L7 Research Scientist Degree Apprenticeship (MSc Data S=
+cience) information webinars - DO NOT REPLY ALL
+
+=20
+
+Good Afternoon,
+
+=20
+
+Thank you for registering your interest in attending one of our online info=
+rmation sessions. The webinar will begin with a presentation about the progr=
+amme followed by time for questions. In advance of the presentation, you can=
+ read all about the programme on our website.
+
+=20
+
+Joining details for both events are below. If you are unable to make your p=
+referred choice on the day, please feel free to join the other.
+
+=20
+
+Monday 15th November, 10.30am =E2=80=93 11.30am
+
+Join Zoom Meeting
+
+https://Universityofexeter.zoom.us/j/98815071219?pwd=3DRmJkMVVsL2tZNW1LUU1nVE=
+FpSE5pZz09
+
+=20
+
+Meeting ID: 988 1507 1219
+
+Password: 029770
+
+=20
+
+Dial by your location
+
+        +44 208 080 6591 United Kingdom
+
+        +44 203 481 5240 United Kingdom
+
+=20
+
+Tuesday 16th November, 3pm =E2=80=93 4pm
+
+Join Zoom Meeting
+
+https://Universityofexeter.zoom.us/j/91800833629?pwd=3DRTBVb0krL2k1L1BYZ1o4OD=
+ZrVXlCZz09
+
+=20
+
+Meeting ID: 918 0083 3629
+
+Password: 722829
+
+=20
+
+Dial by your location
+
+        +44 208 080 6591 United Kingdom
+
+        +44 203 481 5240 United Kingdom
+
+=20
+
+In need of support?
+
+If you do not have a University of Exeter login please visit <a href=3D"https=
+://support.zoom.us/hc/en-us">Zoom Support</a>.
+
+=20
+
+We look forward to meeting you soon.
+
+=20
+
+Kind regards
+
+=20
+
+The Digital Apprenticeship team
+
+=20
+
+
+--B_3720628856_1362394239
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsof=
+t-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" xmlns:m=
+=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org=
+/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta na=
+me=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)"><!--[if !mso]><=
+style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-priority:99;
+	mso-style-link:"Plain Text Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Plain Text";
+	font-family:"Calibri",sans-serif;}
+span.EmailStyle21
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3D"EN-GB" link=3D"#0563C1" =
+vlink=3D"#954F72" style=3D"word-wrap:break-word"><div class=3D"WordSection1"><p cl=
+ass=3D"MsoNormal">Hi Syed., Good morning <o:p></o:p></p><p class=3D"MsoNormal"><=
+o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">As discussed, I am happy to support=
+ you on the MSc program. You can treat this as my approval.<o:p></o:p></p><p=
+ class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">Please be infor=
+med that you may need more efforts than what may have been highlighted as re=
+quirement on MSc program. This means you may have to balance MSc Program, Wo=
+rk and personal Life.<o:p></o:p></p><p class=3D"MsoNormal">As I am also on the=
+ MSc programme we may have to be enrolled into mutually exclusive sections o=
+f the program so that we minimise any outages for work, so that one of us is=
+ always present and prioritise VISA work.<o:p></o:p></p><p class=3D"MsoNormal"=
+><o:p>&nbsp;</o:p></p><div><div><p class=3D"MsoNormal"><b><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#1F497D;mso-fareast=
+-language:EN-GB">Regards, Balki</span></b><span style=3D"color:black;mso-farea=
+st-language:EN-GB"><o:p></o:p></span></p><p class=3D"MsoNormal"><b><span style=
+=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#1F497D;ms=
+o-fareast-language:EN-GB">Balakrishna Chittari</span></b><b><span style=3D"fon=
+t-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#0023A0;mso-far=
+east-language:EN-GB">&nbsp;</span></b><b><span style=3D"font-size:10.0pt;font-=
+family:&quot;Arial&quot;,sans-serif;color:#E36C0A;mso-fareast-language:EN-GB=
+">|</span></b><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;=
+,sans-serif;color:#363636;mso-fareast-language:EN-GB">&nbsp;</span></b><b><s=
+pan style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#=
+0023A0;mso-fareast-language:EN-GB">&nbsp;</span></b><b><span style=3D"font-siz=
+e:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#1F497D;mso-fareast-=
+language:EN-GB">Data Science Lab&nbsp;</span></b><b><span style=3D"font-size:1=
+0.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#E36C0A;mso-fareast-lan=
+guage:EN-GB">|&nbsp;</span></b><b><span style=3D"font-size:10.0pt;font-family:=
+&quot;Arial&quot;,sans-serif;color:#1F497D;mso-fareast-language:EN-GB">Visa =
+Europe</span></b><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&qu=
+ot;,sans-serif;color:#E36C0A;mso-fareast-language:EN-GB">&nbsp;|</span></b><=
+b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;col=
+or:navy;mso-fareast-language:EN-GB">&nbsp;</span></b><b><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#1F497D;mso-fareast=
+-language:EN-GB">T +44 (0)&nbsp;118 939 7148</span></b><b><span style=3D"font-=
+size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#0023A0;mso-farea=
+st-language:EN-GB">&nbsp;</span></b><b><span style=3D"font-size:10.0pt;font-fa=
+mily:&quot;Arial&quot;,sans-serif;color:#E36C0A;mso-fareast-language:EN-GB">=
+|</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sans=
+-serif;color:navy;mso-fareast-language:EN-GB">&nbsp;</span><span style=3D"font=
+-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#363636;mso-fare=
+ast-language:EN-GB">&nbsp;</span><span lang=3D"EN-US" style=3D"color:black;mso-f=
+areast-language:EN-GB"><a href=3D"blocked::http://www.visaeurope.com/" title=3D"=
+blocked::http://www.visaeurope.com/"><span lang=3D"EN-GB" style=3D"font-size:10.=
+0pt;font-family:&quot;Arial&quot;,sans-serif">www.visaeurope.com</span></a><=
+/span><span style=3D"color:black;mso-fareast-language:EN-GB"><o:p></o:p></span=
+></p><p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-family:&quot;Segoe =
+UI&quot;,sans-serif;color:#1F497D;mso-fareast-language:EN-GB"><img border=3D"0=
+" width=3D"260" height=3D"32" style=3D"width:2.7083in;height:.3333in" id=3D"Picture_=
+x0020_1" src=3D"file:////Users/chittarb/Library/Containers/com.microsoft.Outlo=
+ok/Data/Library/Caches/Signatures/signature_2072324953" alt=3D"Streamers-01"><=
+/span><o:p></o:p></p></div></div><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><=
+p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><div style=3D"border:none;border-top:=
+solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm"><p class=3D"MsoNormal"><b><span=
+ style=3D"font-size:12.0pt;color:black;mso-fareast-language:EN-GB">From: </spa=
+n></b><span style=3D"font-size:12.0pt;color:black;mso-fareast-language:EN-GB">=
+&quot;SYED, JAVEDHUSSAIN&quot; &lt;jasyed@visa.com&gt;<br><b>Date: </b>Wedne=
+sday, 24 November 2021 at 09:34<br><b>To: </b>&quot;Chittari, Balakrishna&qu=
+ot; &lt;chittarb@visa.com&gt;<br><b>Subject: </b>Re: Details of L7 Research =
+Scientist Degree Apprenticeship (MSc Data Science) information webinars - DO=
+ NOT REPLY ALL<o:p></o:p></span></p></div><div><p class=3D"MsoNormal"><span st=
+yle=3D"mso-fareast-language:EN-GB"><o:p>&nbsp;</o:p></span></p></div><p class=3D=
+"MsoNormal">Hi Balki,<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></=
+p><p class=3D"MsoNormal">Good Morning.<o:p></o:p></p><p class=3D"MsoNormal"><o:p=
+>&nbsp;</o:p></p><p class=3D"MsoNormal">I=E2=80=99m very much interested to enrol fo=
+r the apprenticeship program <span style=3D"font-size:12.0pt;color:black;mso-f=
+areast-language:EN-GB">L7 Research Scientist </span>which is going to start =
+from Jan=E2=80=9922.<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p cl=
+ass=3D"MsoNormal">Can you please provide me your approval so that I can enrol =
+for this program.<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p=
+ class=3D"MsoNormal">Thanks =E2=80=93 Syed.<o:p></o:p></p><p class=3D"MsoNormal"><o:p>=
+&nbsp;</o:p></p><div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;paddi=
+ng:3.0pt 0cm 0cm 0cm"><p class=3D"MsoNormal"><b><span style=3D"font-size:12.0pt;=
+color:black;mso-fareast-language:EN-GB">From: </span></b><span style=3D"font-s=
+ize:12.0pt;color:black;mso-fareast-language:EN-GB">Digital Apprenticeships M=
+ailbox &lt;digitalapprenticeships@exeter.ac.uk&gt;<br><b>Date: </b>Thursday,=
+ 11 November 2021 at 16:23<br><b>To: </b>Digital Apprenticeships Mailbox &lt=
+;digitalapprenticeships@exeter.ac.uk&gt;<br><b>Cc: </b>&quot;Taylor, Fran&qu=
+ot; &lt;F.Taylor4@exeter.ac.uk&gt;, &quot;Salmon, Greg&quot; &lt;G.Salmon@ex=
+eter.ac.uk&gt;, &quot;Paci, Julia&quot; &lt;J.C.Paci@exeter.ac.uk&gt;<br><b>=
+Subject: </b>Details of L7 Research Scientist Degree Apprenticeship (MSc Dat=
+a Science) information webinars - DO NOT REPLY ALL<o:p></o:p></span></p></di=
+v><div><p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-GB"><o:p>&n=
+bsp;</o:p></span></p></div><p class=3D"MsoNormal">Good Afternoon,<o:p></o:p></=
+p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">Thank you f=
+or registering your interest in attending one of our online information sess=
+ions. The webinar will begin with a presentation about the programme followe=
+d by time for questions. In advance of the presentation, you can read all ab=
+out the programme on our <a href=3D"https://nam10.safelinks.protection.outlook=
+.com/?url=3Dhttps%3A%2F%2Fwww.exeter.ac.uk%2Fstudy%2Fdegreeapprenticeships%2Fp=
+rogrammes%2Fresearchscientist%2F&amp;data=3D04%7C01%7Cjasyed%40visa.com%7C9ff8=
+781e89364c32f90b08d9a52f97de%7C38305e12e15d4ee888b9c4db1c477d76%7C0%7C0%7C63=
+7722446122702868%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzI=
+iLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=3DKSKXsrJUM2AnFG8yYnD6YBoOp%2=
+FYI8QQa6TJqBQFV3wU%3D&amp;reserved=3D0">website</a>.<o:p></o:p></p><p class=3D"M=
+soNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">Joining details for both=
+ events are below. If you are unable to make your preferred choice on the da=
+y, please feel free to join the other.<o:p></o:p></p><p class=3D"MsoNormal"><o=
+:p>&nbsp;</o:p></p><p class=3D"MsoNormal"><b>Monday 15<sup>th</sup> November, =
+10.30am =E2=80=93 11.30am<o:p></o:p></b></p><p class=3D"MsoNormal"><b>Join Zoom Meet=
+ing<o:p></o:p></b></p><p class=3D"MsoPlainText"><a href=3D"https://nam10.safelin=
+ks.protection.outlook.com/?url=3Dhttps%3A%2F%2Funiversityofexeter.zoom.us%2Fj%=
+2F98815071219%3Fpwd%3DRmJkMVVsL2tZNW1LUU1nVEFpSE5pZz09&amp;data=3D04%7C01%7Cja=
+syed%40visa.com%7C9ff8781e89364c32f90b08d9a52f97de%7C38305e12e15d4ee888b9c4d=
+b1c477d76%7C0%7C0%7C637722446122702868%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wL=
+jAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=3Dur1l%=
+2B%2BEJbpVZcNzca75iQ75DRPGxg6EZXFVoEA%2B9P%2BA%3D&amp;reserved=3D0">https://Un=
+iversityofexeter.zoom.us/j/98815071219?pwd=3DRmJkMVVsL2tZNW1LUU1nVEFpSE5pZz09<=
+/a><o:p></o:p></p><p class=3D"MsoPlainText"><o:p>&nbsp;</o:p></p><p class=3D"Mso=
+PlainText">Meeting ID: 988 1507 1219<o:p></o:p></p><p class=3D"MsoPlainText">P=
+assword: 029770<o:p></o:p></p><p class=3D"MsoPlainText"><o:p>&nbsp;</o:p></p><=
+p class=3D"MsoPlainText">Dial by your location<o:p></o:p></p><p class=3D"MsoPlai=
+nText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +44 208 080 6591 United Ki=
+ngdom<o:p></o:p></p><p class=3D"MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp; +44 203 481 5240 United Kingdom<o:p></o:p></p><p class=3D"MsoNormal=
+"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal"><b>Tuesday 16<sup>th</sup> Novem=
+ber, 3pm =E2=80=93 4pm<o:p></o:p></b></p><p class=3D"MsoPlainText"><b>Join Zoom Meet=
+ing<o:p></o:p></b></p><p class=3D"MsoPlainText"><a href=3D"https://nam10.safelin=
+ks.protection.outlook.com/?url=3Dhttps%3A%2F%2Funiversityofexeter.zoom.us%2Fj%=
+2F91800833629%3Fpwd%3DRTBVb0krL2k1L1BYZ1o4ODZrVXlCZz09&amp;data=3D04%7C01%7Cja=
+syed%40visa.com%7C9ff8781e89364c32f90b08d9a52f97de%7C38305e12e15d4ee888b9c4d=
+b1c477d76%7C0%7C0%7C637722446122712819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wL=
+jAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=3DLxuCP=
+jfm0L5h1N8tyTQWxPN22%2BpuAN00A0mlolta0SI%3D&amp;reserved=3D0">https://Universi=
+tyofexeter.zoom.us/j/91800833629?pwd=3DRTBVb0krL2k1L1BYZ1o4ODZrVXlCZz09</a><o:=
+p></o:p></p><p class=3D"MsoPlainText"><o:p>&nbsp;</o:p></p><p class=3D"MsoPlainT=
+ext">Meeting ID: 918 0083 3629<o:p></o:p></p><p class=3D"MsoPlainText">Passwor=
+d: 722829<o:p></o:p></p><p class=3D"MsoPlainText"><o:p>&nbsp;</o:p></p><p clas=
+s=3D"MsoPlainText">Dial by your location<o:p></o:p></p><p class=3D"MsoPlainText"=
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +44 208 080 6591 United Kingdom<=
+o:p></o:p></p><p class=3D"MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp; +44 203 481 5240 United Kingdom<o:p></o:p></p><p class=3D"MsoPlainText"><=
+o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">In need of support?<o:p></o:p></p><=
+p class=3D"MsoPlainText"><b>If you do not have a University of Exeter login pl=
+ease visit &lt;a href=3D&quot;<a href=3D"https://nam10.safelinks.protection.outl=
+ook.com/?url=3Dhttps%3A%2F%2Fsupport.zoom.us%2Fhc%2Fen-us&amp;data=3D04%7C01%7Cj=
+asyed%40visa.com%7C9ff8781e89364c32f90b08d9a52f97de%7C38305e12e15d4ee888b9c4=
+db1c477d76%7C0%7C0%7C637722446122722777%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4w=
+LjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=3DXofk=
+lEhjOqefparvT%2BYxu4YzMaUiEo4QJAfnc1xqlTk%3D&amp;reserved=3D0">https://support=
+.zoom.us/hc/en-us</a>&quot;&gt;Zoom Support&lt;/a&gt;.<o:p></o:p></b></p><p =
+class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">We look forward =
+to meeting you soon.<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p=
+><p class=3D"MsoNormal">Kind regards<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&=
+nbsp;</o:p></p><p class=3D"MsoNormal">The Digital Apprenticeship team<o:p></o:=
+p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p></div></body></html>
+
+--B_3720628856_1362394239--
+
